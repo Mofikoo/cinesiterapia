@@ -23,13 +23,7 @@ CARDS.push(
        'Si es necesario, pedir una ligera flexión de la cabeza para que el músculo resalte.',
        'Palpar abajo el haz esternal (1, tendón sobre el esternón) y luego el haz clavicular (2, más lateral, sobre la clavícula).',
        'Seguir el músculo hasta la apófisis mastoides del temporal.',
-       'En la mastoides: haz cleidomastoideo en la cara lateral, haz esternomastoideo en el vértice.']),
-    w: {
-      x: L('Origines : chef sternal = partie supérieure de la face antérieure du manubrium ; chef claviculaire = face supérieure du tiers médial de la clavicule. Contraction unilatérale : inclinaison homolatérale et rotation controlatérale du cou (d\'où le positionnement du patient).',
-        'Origins: sternal head = upper anterior surface of the manubrium; clavicular head = upper surface of the medial third of the clavicle. Unilateral contraction: ipsilateral side bending and contralateral rotation of the neck (hence the patient positioning).',
-        'Orígenes: haz esternal = parte superior de la cara anterior del manubrio; haz clavicular = cara superior del tercio medial de la clavícula. Contracción unilateral: inclinación homolateral y rotación contralateral del cuello (de ahí la posición del paciente).'),
-      src: [KH('sternocleidomastoid-muscle', 'Sternocleidomastoid muscle')]
-    }
+       'En la mastoides: haz cleidomastoideo en la cara lateral, haz esternomastoideo en el vértice.'])
   },
   {
     id: 'trapeze-sup', p: 'p1', s: '6-7', img: ['trapeze-sup'],
@@ -47,13 +41,7 @@ CARDS.push(
        'Observe and palpate the activation: 1 = superior fibres (descending part), 2 = inferior fibres (ascending part).'],
       ['Paciente en decúbito lateral.', 'Fisioterapeuta delante del paciente.',
        'Resistencia en la cara lateral de la cabeza + el hombro homolateral.',
-       'Observar y palpar la activación: 1 = fibras superiores (porción descendente), 2 = fibras inferiores (porción ascendente).']),
-    w: {
-      x: L('Partie descendante : de la ligne nuchale supérieure, la protubérance occipitale externe et le ligament nuchal vers le tiers latéral de la clavicule.',
-        'Descending part: from the superior nuchal line, external occipital protuberance and nuchal ligament to the lateral third of the clavicle.',
-        'Porción descendente: desde la línea nucal superior, la protuberancia occipital externa y el ligamento nucal hasta el tercio lateral de la clavícula.'),
-      src: [KH('trapezius-muscle', 'Trapezius muscle')]
-    }
+       'Observar y palpar la activación: 1 = fibras superiores (porción descendente), 2 = fibras inferiores (porción ascendente).'])
   },
   {
     id: 'trapeze-moy', p: 'p1', s: '8', img: ['trapeze-moy'],
@@ -74,13 +62,7 @@ CARDS.push(
        'Palpar la contracción de las fibras medias.']),
     n: L('Le PDF écrit « middle fibres (descending part) » : les fibres moyennes correspondent à la partie transverse.',
       'The slide says "middle fibres (descending part)": middle fibres are the transverse part.',
-      'El PDF dice «middle fibres (descending part)»: las fibras medias corresponden a la porción transversa.'),
-    w: {
-      x: L('Partie transverse : des processus épineux T1-T4 (ou C7-T3) vers le bord médial de l\'acromion et la crête de l\'épine de la scapula.',
-        'Transverse part: from the spinous processes of T1-T4 (or C7-T3) to the medial acromial margin and the crest of the scapular spine.',
-        'Porción transversa: desde las apófisis espinosas de T1-T4 (o C7-T3) hasta el borde medial del acromion y la cresta de la espina escapular.'),
-      src: [KH('trapezius-muscle', 'Trapezius muscle')]
-    }
+      'El PDF dice «middle fibres (descending part)»: las fibras medias corresponden a la porción transversa.')
   },
   {
     id: 'trapeze-inf', p: 'p1', s: '9', img: ['trapeze-inf'],
@@ -101,13 +83,7 @@ CARDS.push(
        'Palpar las fibras inferiores entre el borde medial de la escápula y las espinosas torácicas bajas.']),
     n: L('Le PDF écrit « inferior fibres (descending part) » : les fibres inférieures correspondent à la partie ascendante.',
       'The slide says "inferior fibres (descending part)": inferior fibres are the ascending part.',
-      'El PDF dice «inferior fibres (descending part)»: las fibras inferiores corresponden a la porción ascendente.'),
-    w: {
-      x: L('Partie ascendante : des processus épineux T4-T12 vers l\'extrémité médiale de l\'épine de la scapula.',
-        'Ascending part: from the spinous processes of T4-T12 to the medial end of the scapular spine.',
-        'Porción ascendente: desde las apófisis espinosas de T4-T12 hasta el extremo medial de la espina escapular.'),
-      src: [KH('trapezius-muscle', 'Trapezius muscle')]
-    }
+      'El PDF dice «inferior fibres (descending part)»: las fibras inferiores corresponden a la porción ascendente.')
   },
   {
     id: 'rhomboides', p: 'p1', s: '10-11', img: ['rhomboides'],
@@ -125,13 +101,7 @@ CARDS.push(
        'Palpate between the spinal border of the scapula and the thoracic spine.'],
       ['Paciente en decúbito lateral, hombro y codo en flexión de 90°.',
        'Fisioterapeuta delante; realizar un pequeño campaneo externo de la escápula.',
-       'Palpar entre el borde espinal de la escápula y la columna torácica.']),
-    w: {
-      x: L('Petit rhomboïde : ligament nuchal, épineuses C7-T1 → racine de l\'épine de la scapula. Grand rhomboïde : épineuses T2-T5 → bord médial de la scapula. Action : attirent la scapula en haut et en dedans et tournent la glène vers le bas (l\'inverse de la sonnette externe).',
-        'Rhomboid minor: nuchal ligament, C7-T1 spinous processes → root of the scapular spine. Rhomboid major: T2-T5 spinous processes → medial border of the scapula. Action: draw the scapula superomedially and rotate the glenoid inferiorly (opposite of the external bell).',
-        'Romboides menor: ligamento nucal, espinosas C7-T1 → raíz de la espina escapular. Romboides mayor: espinosas T2-T5 → borde medial de la escápula. Acción: llevan la escápula hacia arriba y adentro y rotan la glenoide hacia abajo (lo contrario del campaneo externo).'),
-      src: [KH('rhomboid-muscles', 'Rhomboid muscles')]
-    }
+       'Palpar entre el borde espinal de la escápula y la columna torácica.'])
   },
   {
     id: 'supra-epineux', p: 'p1', s: '12-13', img: ['supra-epineux'],
@@ -149,13 +119,7 @@ CARDS.push(
        'Palpate with the right hand above the spine of the scapula.'],
       ['Paciente en decúbito lateral, brazo pegado al tórax.', 'Fisioterapeuta delante del paciente.',
        'Resistencia en el codo contra la abducción: contracción isométrica.',
-       'Palpar con la mano derecha por encima de la espina de la escápula.']),
-    w: {
-      x: L('Fosse supra-épineuse → tubercule majeur de l\'humérus. Action : abduction du bras et stabilisation de la tête humérale dans la glène.',
-        'Supraspinous fossa → greater tubercle of the humerus. Action: arm abduction and stabilisation of the humeral head in the glenoid.',
-        'Fosa supraespinosa → tubérculo mayor del húmero. Acción: abducción del brazo y estabilización de la cabeza humeral en la glenoide.'),
-      src: [KH('supraspinatus-muscle', 'Supraspinatus muscle')]
-    }
+       'Palpar con la mano derecha por encima de la espina de la escápula.'])
   },
   {
     id: 'supra-epineux-alt', p: 'p1', s: '14', img: ['supra-epineux-alt'],
@@ -194,13 +158,7 @@ CARDS.push(
        'Delimitar con las manos el vientre del infraespinoso bajo la espina de la escápula.']),
     n: L('Le PDF ne précise pas la position du patient ; l\'image montre un décubitus latéral.',
       'The slide does not state the patient position; the picture shows side-lying.',
-      'El PDF no precisa la posición del paciente; la imagen muestra decúbito lateral.'),
-    w: {
-      x: L('Fosse infra-épineuse → tubercule majeur de l\'humérus. Action : rotation externe du bras, stabilisation de la tête humérale.',
-        'Infraspinous fossa → greater tubercle of the humerus. Action: arm external rotation, stabilisation of the humeral head.',
-        'Fosa infraespinosa → tubérculo mayor del húmero. Acción: rotación externa del brazo, estabilización de la cabeza humeral.'),
-      src: [KH('infraspinatus-muscle', 'Infraspinatus muscle')]
-    }
+      'El PDF no precisa la posición del paciente; la imagen muestra decúbito lateral.')
   },
   {
     id: 'grand-rond', p: 'p1', s: '17-18', img: ['grand-rond'],
@@ -218,13 +176,7 @@ CARDS.push(
        'The finger points to teres major near the inferior angle of the scapula.'],
       ['Paciente en decúbito lateral, hombro en rotación interna.', 'Fisioterapeuta delante del paciente.',
        'Resistencia contra la extensión del codo + aducción / rotación interna del hombro.',
-       'El dedo señala el redondo mayor cerca del ángulo inferior de la escápula.']),
-    w: {
-      x: L('Angle inférieur et partie basse du bord latéral de la scapula → lèvre médiale du sillon intertuberculaire. Action : extension et rotation interne du bras, aide à l\'adduction.',
-        'Inferior angle and lower lateral border of the scapula → medial lip of the intertubercular sulcus. Action: arm extension and internal rotation, assists adduction.',
-        'Ángulo inferior y parte baja del borde lateral de la escápula → labio medial del surco intertubercular. Acción: extensión y rotación interna del brazo, ayuda a la aducción.'),
-      src: [KH('teres-major-muscle', 'Teres major muscle')]
-    }
+       'El dedo señala el redondo mayor cerca del ángulo inferior de la escápula.'])
   },
   {
     id: 'grand-rond-alt', p: 'p1', s: '19', img: ['grand-rond-alt'],
@@ -255,13 +207,7 @@ CARDS.push(
        'The finger points to teres minor (above teres major): feel the contraction under the fingers.'],
       ['Paciente en decúbito lateral, hombro en abducción + flexión de 90°.', 'Fisioterapeuta delante del paciente.',
        'Resistencia contra la rotación externa del hombro.',
-       'El dedo señala el redondo menor (por encima del redondo mayor): percibir la contracción bajo los dedos.']),
-    w: {
-      x: L('Bord latéral de la scapula → tubercule majeur de l\'humérus. Action : rotation externe (comme l\'infra-épineux), d\'où la résistance en rotation externe ; le grand rond, lui, est rotateur interne.',
-        'Lateral border of the scapula → greater tubercle of the humerus. Action: external rotation (like infraspinatus), hence the external rotation resistance; teres major is an internal rotator.',
-        'Borde lateral de la escápula → tubérculo mayor del húmero. Acción: rotación externa (como el infraespinoso), de ahí la resistencia en rotación externa; el redondo mayor es rotador interno.'),
-      src: [KH('teres-minor-muscle', 'Teres minor muscle'), KH('teres-major-muscle', 'Teres major muscle')]
-    }
+       'El dedo señala el redondo menor (por encima del redondo mayor): percibir la contracción bajo los dedos.'])
   },
   {
     id: 'grand-pec-clav', p: 'p1', s: '23-24', img: ['grand-pec-clav'],
@@ -279,13 +225,7 @@ CARDS.push(
        'Palpate between the axilla and the nipple: clavicular (1) and sternocostal (2) parts.'],
       ['Paciente en decúbito supino, hombro en abducción, codo en flexión de 90°.', 'Fisioterapeuta delante del paciente.',
        'Resistencia en la cara interna del brazo contra la aducción horizontal.',
-       'Palpar entre la axila y el pezón: porción clavicular (1) y esternocostal (2).']),
-    w: {
-      x: L('Chef claviculaire : face antérieure de la clavicule médiale. Chef sterno-costal : sternum, 6 premiers cartilages costaux, aponévrose de l\'oblique externe. Insertion : sillon intertuberculaire. Action : adduction et rotation interne du membre supérieur ; le chef claviculaire fléchit le bras.',
-        'Clavicular head: anterior surface of the medial clavicle. Sternocostal head: sternum, upper six costal cartilages, external oblique aponeurosis. Insertion: intertubercular sulcus. Action: adduction and internal rotation of the upper limb; the clavicular head flexes the arm.',
-        'Haz clavicular: cara anterior de la clavícula medial. Haz esternocostal: esternón, 6 primeros cartílagos costales, aponeurosis del oblicuo externo. Inserción: surco intertubercular. Acción: aducción y rotación interna del miembro superior; el haz clavicular flexiona el brazo.'),
-      src: [TMA('upper-limb/muscles/pectoral-region/', 'Muscles of the pectoral region')]
-    }
+       'Palpar entre la axila y el pezón: porción clavicular (1) y esternocostal (2).'])
   },
   {
     id: 'grand-pec-abdo', p: 'p1', s: '25', img: ['grand-pec-abdo'],
@@ -324,13 +264,7 @@ CARDS.push(
       ['Paciente sentado o en decúbito supino, hombro en rotación interna (mano en la espalda).',
        'El fisioterapeuta ayuda la rotación interna.',
        'Colocar un dedo en la axila.',
-       'Empujar oblicuamente hacia la apófisis coracoides de la escápula para notar el músculo.']),
-    w: {
-      x: L('Côtes 3 à 5 → processus coracoïde. Action : attire la scapula en avant et en bas, la stabilise contre le thorax.',
-        'Ribs 3-5 → coracoid process. Action: draws the scapula anteroinferiorly and stabilises it against the chest wall.',
-        'Costillas 3 a 5 → apófisis coracoides. Acción: lleva la escápula hacia delante y abajo y la estabiliza contra el tórax.'),
-      src: [KH('pectoralis-minor-muscle', 'Pectoralis minor muscle')]
-    }
+       'Empujar oblicuamente hacia la apófisis coracoides de la escápula para notar el músculo.'])
   },
   {
     id: 'grand-dorsal', p: 'p1', s: '28-29', img: ['grand-dorsal'],
@@ -348,13 +282,7 @@ CARDS.push(
        'Move lateral and below them: palpate latissimus dorsi.'],
       ['Paciente en decúbito prono.',
        'Localizar las fibras inferiores del trapecio.',
-       'Situarse lateral e inferior a ellas: palpar el dorsal ancho.']),
-    w: {
-      x: L('Origines : épineuses T7-T12 et fascia thoraco-lombaire, crête iliaque (tiers postérieur), côtes 9-12, angle inférieur de la scapula. Insertion : sillon intertuberculaire. Action : rotation interne, adduction et extension du bras.',
-        'Origins: T7-T12 spinous processes and thoracolumbar fascia, posterior third of the iliac crest, ribs 9-12, inferior angle of the scapula. Insertion: intertubercular sulcus. Action: arm internal rotation, adduction and extension.',
-        'Orígenes: espinosas T7-T12 y fascia toracolumbar, tercio posterior de la cresta ilíaca, costillas 9-12, ángulo inferior de la escápula. Inserción: surco intertubercular. Acción: rotación interna, aducción y extensión del brazo.'),
-      src: [KH('latissimus-dorsi-muscle', 'Latissimus dorsi muscle')]
-    }
+       'Situarse lateral e inferior a ellas: palpar el dorsal ancho.'])
   },
   {
     id: 'grand-dorsal-ld', p: 'p1', s: '30', img: ['grand-dorsal-ld', 'grand-dorsal-schema'],
@@ -393,12 +321,6 @@ CARDS.push(
       ['Paciente en decúbito lateral.',
        'Mano craneal del fisioterapeuta en la 12.ª costilla, mano caudal en la cresta ilíaca.',
        'Pedir al paciente que acerque la cresta ilíaca a la costilla contra la mano del fisioterapeuta.',
-       'Palpar el músculo con la mano craneal.']),
-    w: {
-      x: L('Crête iliaque et ligament ilio-lombaire → bord inférieur de la 12e côte et transverses L1-L4. Contraction unilatérale : inclinaison homolatérale du tronc (d\'où le rapprochement crête-côte).',
-        'Iliac crest and iliolumbar ligament → inferior border of rib 12 and L1-L4 transverse processes. Unilateral contraction: ipsilateral trunk side bending (hence bringing crest and rib together).',
-        'Cresta ilíaca y ligamento iliolumbar → borde inferior de la 12.ª costilla y transversas L1-L4. Contracción unilateral: inclinación homolateral del tronco (de ahí acercar cresta y costilla).'),
-      src: [KH('quadratus-lumborum-muscle', 'Quadratus lumborum muscle')]
-    }
+       'Palpar el músculo con la mano craneal.'])
   }
 );

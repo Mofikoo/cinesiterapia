@@ -28,13 +28,7 @@ CARDS.push(
        'Palpate TFL during the contraction.'],
       ['Paciente en decúbito lateral, pierna evaluada arriba, cadera flexionada y en abducción.', 'Fisioterapeuta delante del paciente.',
        'El paciente realiza abducción de cadera contra resistencia manteniendo la flexión.',
-       'Palpar el TFL durante la contracción.']),
-    w: {
-      x: L('Lèvre externe de la crête iliaque antérieure et EIAS → condyle latéral du tibia via la bandelette ilio-tibiale. Innervation : nerf glutéal supérieur (L4-S1).',
-        'Outer lip of the anterior iliac crest and ASIS → lateral tibial condyle via the iliotibial tract. Innervation: superior gluteal nerve (L4-S1).',
-        'Labio externo de la cresta ilíaca anterior y EIAS → cóndilo lateral de la tibia vía la cintilla iliotibial. Inervación: nervio glúteo superior (L4-S1).'),
-      src: [KH('tensor-fasciae-latae-muscle', 'Tensor fasciae latae muscle')]
-    }
+       'Palpar el TFL durante la contracción.'])
   },
   {
     id: 'tfl-dd', p: 'p6', s: '7', img: ['tfl-dd'],
@@ -70,13 +64,7 @@ CARDS.push(
        'Palpate the muscle from the ASIS following its oblique course on the thigh.'],
       ['Paciente en decúbito supino, cadera y rodilla flexionadas, cadera en rotación externa.', 'Fisioterapeuta al lado del paciente.',
        'Contracción isométrica resistida en flexión, abducción y rotación externa de cadera.',
-       'Palpar el músculo desde la EIAS siguiendo su trayecto oblicuo en el muslo.']),
-    w: {
-      x: L('EIAS → face médiale supérieure du tibia. Action : à la hanche, flexion, abduction et rotation latérale ; au genou, flexion (d\'où la position « en tailleur »).',
-        'ASIS → superior medial tibia. Action: at the hip, flexion, abduction and lateral rotation; at the knee, flexion (hence the "cross-legged" position).',
-        'EIAS → cara medial superior de la tibia. Acción: en la cadera, flexión, abducción y rotación lateral; en la rodilla, flexión (de ahí la posición «de sastre»).'),
-      src: [TMA('lower-limb/muscles/thigh/anterior-compartment/', 'Muscles in the anterior compartment of the thigh')]
-    }
+       'Palpar el músculo desde la EIAS siguiendo su trayecto oblicuo en el muslo.'])
   },
   {
     id: 'psoas', p: 'p6', s: '10-11', img: ['psoas'],
@@ -97,13 +85,7 @@ CARDS.push(
       ['Paciente en decúbito supino, rodillas flexionadas, pies apoyados.', 'Fisioterapeuta al lado del paciente, a nivel de la cadera.',
        'Localizar el ombligo y la EIAS, luego el punto intermedio.',
        'Penetrar en la zona abdominal suave y lentamente para evitar reacciones de defensa.',
-       'Pedir una flexión de cadera y notar la contracción.']),
-    w: {
-      x: L('Corps vertébraux et disques T12-L4, processus transverses L1-L5 → petit trochanter (tendon ilio-psoas). Action : flexion de hanche, rotation latérale de cuisse, inclinaison latérale du tronc.',
-        'Vertebral bodies and discs T12-L4, transverse processes L1-L5 → lesser trochanter (iliopsoas tendon). Action: hip flexion, thigh lateral rotation, trunk lateral flexion.',
-        'Cuerpos vertebrales y discos T12-L4, apófisis transversas L1-L5 → trocánter menor (tendón iliopsoas). Acción: flexión de cadera, rotación lateral del muslo, inclinación lateral del tronco.'),
-      src: [KH('psoas-major-muscle', 'Psoas major muscle')]
-    }
+       'Pedir una flexión de cadera y notar la contracción.'])
   },
   {
     id: 'pectine', p: 'p6', s: '14-15', img: ['pectine', 'pectine-2'],
@@ -121,13 +103,7 @@ CARDS.push(
        'Palpate in the triangular depression between adductor longus and sartorius (mind the femoral pulse).'],
       ['Paciente en decúbito supino, rodilla y cadera flexionadas.', 'Fisioterapeuta al lado del paciente, a nivel de la cadera.',
        'Resistencia contra la aducción + flexión de cadera.',
-       'Palpar en la depresión triangular entre aductor largo y sartorio (cuidado con el pulso femoral).']),
-    w: {
-      x: L('Ligne pectinéale du pubis → ligne pectinéale du fémur. Action : flexion et adduction de hanche. Innervation : nerf fémoral (± nerf obturateur).',
-        'Pectineal line of the pubis → pectineal line of the femur. Action: hip flexion and adduction. Innervation: femoral nerve (± obturator nerve).',
-        'Línea pectínea del pubis → línea pectínea del fémur. Acción: flexión y aducción de cadera. Inervación: nervio femoral (± obturador).'),
-      src: [KH('pectineus-muscle', 'Pectineus muscle')]
-    }
+       'Palpar en la depresión triangular entre aductor largo y sartorio (cuidado con el pulso femoral).'])
   },
   {
     id: 'long-add', p: 'p6', s: '16-17', img: ['long-add'],
@@ -143,13 +119,7 @@ CARDS.push(
        'Palpate the tendinous prominence on the upper medial thigh.'],
       ['Paciente en decúbito supino, rodilla y cadera flexionadas.', 'Fisioterapeuta al lado del paciente, a nivel de la cadera.',
        'Resistencia contra la aducción de cadera.',
-       'Palpar el relieve tendinoso en la parte alta y medial del muslo.']),
-    w: {
-      x: L('Corps du pubis (sous la crête pubienne) → tiers moyen de la ligne âpre. Action : flexion, adduction et rotation externe de cuisse. Innervation : nerf obturateur (L2-L4).',
-        'Body of the pubis (below the pubic crest) → middle third of the linea aspera. Action: thigh flexion, adduction and external rotation. Innervation: obturator nerve (L2-L4).',
-        'Cuerpo del pubis (bajo la cresta púbica) → tercio medio de la línea áspera. Acción: flexión, aducción y rotación externa del muslo. Inervación: nervio obturador (L2-L4).'),
-      src: [KH('adductor-longus-muscle', 'Adductor longus muscle')]
-    }
+       'Palpar el relieve tendinoso en la parte alta y medial del muslo.'])
   },
   {
     id: 'court-add', p: 'p6', s: '18-19', img: ['court-add', 'court-add-2'],
@@ -161,13 +131,7 @@ CARDS.push(
     st: withSteps(HIP_ADD_START, L(
       ['Repérer le gracile (droit interne) et se placer dessus, en partie proximale.', 'Le court adducteur se palpe sous le long adducteur.'],
       ['Locate gracilis and place yourself on top of it, proximally.', 'Adductor brevis is palpated under adductor longus.'],
-      ['Localizar el grácil (recto interno) y situarse encima, en la parte proximal.', 'El aductor corto se palpa bajo el aductor largo.'])),
-    w: {
-      x: L('Corps et branche inférieure du pubis → ligne âpre (lèvre médiale). Action : flexion, adduction et rotation externe de cuisse.',
-        'Body and inferior ramus of the pubis → linea aspera (medial lip). Action: thigh flexion, adduction and external rotation.',
-        'Cuerpo y rama inferior del pubis → línea áspera (labio medial). Acción: flexión, aducción y rotación externa del muslo.'),
-      src: [KH('adductor-brevis-muscle', 'Adductor brevis muscle')]
-    }
+      ['Localizar el grácil (recto interno) y situarse encima, en la parte proximal.', 'El aductor corto se palpa bajo el aductor largo.']))
   },
   {
     id: 'grand-add', p: 'p6', s: '20-21', img: ['grand-add', 'grand-add-2'],
@@ -179,13 +143,7 @@ CARDS.push(
     st: withSteps(HIP_ADD_START, L(
       ['Prendre le gracile comme repère, se placer dessus en proximal.', 'Glisser entre le gracile et le court adducteur : portion interne du grand adducteur.'],
       ['Use gracilis as a landmark, place yourself on it proximally.', 'Slide between gracilis and adductor brevis: internal portion of adductor magnus.'],
-      ['Tomar el grácil como referencia y situarse encima en proximal.', 'Deslizar entre el grácil y el aductor corto: porción interna del aductor mayor.'])),
-    w: {
-      x: L('Partie adductrice : branches ischio-pubiennes → ligne âpre ; partie ischio-condylaire : tubérosité ischiatique → tubercule de l\'adducteur. Double innervation : nerf obturateur et nerf sciatique (division tibiale).',
-        'Adductor part: ischiopubic rami → linea aspera; ischiocondylar part: ischial tuberosity → adductor tubercle. Dual innervation: obturator nerve and sciatic nerve (tibial division).',
-        'Porción aductora: ramas isquiopubianas → línea áspera; porción isquiocondílea: tuberosidad isquiática → tubérculo del aductor. Doble inervación: nervio obturador y ciático (división tibial).'),
-      src: [KH('adductor-magnus', 'Adductor magnus muscle')]
-    }
+      ['Tomar el grácil como referencia y situarse encima en proximal.', 'Deslizar entre el grácil y el aductor corto: porción interna del aductor mayor.']))
   },
   {
     id: 'gracile', p: 'p6', s: '22-23', img: ['gracile', 'gracile-2'],
@@ -195,13 +153,7 @@ CARDS.push(
     st: withSteps(HIP_ADD_START, L(
       ['Suivre la saillie du muscle le long de la face interne de la cuisse.', 'Pour l\'extrémité proximale : hanche et genou fléchis, pied posé sur la table, résister à l\'adduction.'],
       ['Follow the muscle along the inner thigh.', 'For the proximal end: hip and knee flexed, foot on the table, resist adduction.'],
-      ['Seguir el relieve del músculo a lo largo de la cara interna del muslo.', 'Para el extremo proximal: cadera y rodilla flexionadas, pie sobre la camilla, resistir la aducción.'])),
-    w: {
-      x: L('Pubis et branche ischio-pubienne → face médiale du tibia proximal (patte d\'oie). Action : flexion et adduction de hanche, flexion et rotation interne du genou.',
-        'Pubis and ischiopubic ramus → medial proximal tibia (pes anserinus). Action: hip flexion and adduction, knee flexion and internal rotation.',
-        'Pubis y rama isquiopubiana → cara medial de la tibia proximal (pata de ganso). Acción: flexión y aducción de cadera, flexión y rotación interna de rodilla.'),
-      src: [KH('gracilis-muscle', 'Gracilis muscle')]
-    }
+      ['Seguir el relieve del músculo a lo largo de la cara interna del muslo.', 'Para el extremo proximal: cadera y rodilla flexionadas, pie sobre la camilla, resistir la aducción.']))
   },
   {
     id: 'droit-femoral', p: 'p6', s: '24-26', img: ['droit-femoral'],
@@ -222,13 +174,7 @@ CARDS.push(
       ['Paciente en decúbito supino, rodilla extendida, cadera en ligera flexión.', 'Fisioterapeuta al lado, mano bajo el talón para controlar la rodilla.',
        'Pedir una contracción isométrica del cuádriceps.',
        'Palpar el recto femoral entre los vastos interno y externo (tercio medio).',
-       'Pedir una flexión de cadera (separar el talón de la mano): se contrae entre sartorio y TFL.']),
-    w: {
-      x: L('Épine iliaque antéro-inférieure et sillon supra-acétabulaire → patella. Seul chef du quadriceps qui croise hanche et genou : extension du genou et flexion de hanche.',
-        'Anterior inferior iliac spine and supra-acetabular groove → patella. Only quadriceps head crossing both hip and knee: knee extension and hip flexion.',
-        'Espina ilíaca anteroinferior y surco supraacetabular → rótula. Única cabeza del cuádriceps que cruza cadera y rodilla: extensión de rodilla y flexión de cadera.'),
-      src: [TMA('lower-limb/muscles/thigh/anterior-compartment/', 'Muscles in the anterior compartment of the thigh')]
-    }
+       'Pedir una flexión de cadera (separar el talón de la mano): se contrae entre sartorio y TFL.'])
   },
   {
     id: 'semi-tendineux', p: 'p6', s: '27-29', img: ['semi-tendineux', 'semi-tendineux-2'],
@@ -249,13 +195,7 @@ CARDS.push(
        'Palpar el tendón en la cara posteromedial, medial al bíceps femoral.']),
     n: L('Le PDF écrit « KNEE EXT » : le semi-tendineux est fléchisseur du genou, la résistance s\'oppose donc à la flexion (cf. semi-membraneux et biceps : « KNEE FLEX »).',
       'The slide says "KNEE EXT": semitendinosus is a knee flexor, so resistance opposes flexion (cf. semimembranosus and biceps: "KNEE FLEX").',
-      'El PDF dice «KNEE EXT»: el semitendinoso es flexor de rodilla, la resistencia se opone a la flexión (cf. semimembranoso y bíceps: «KNEE FLEX»).'),
-    w: {
-      x: L('Tubérosité ischiatique → tibia proximal sous le condyle médial (patte d\'oie). Action : extension et rotation interne de hanche ; flexion et rotation interne du genou.',
-        'Ischial tuberosity → proximal tibia below the medial condyle (pes anserinus). Action: hip extension and internal rotation; knee flexion and internal rotation.',
-        'Tuberosidad isquiática → tibia proximal bajo el cóndilo medial (pata de ganso). Acción: extensión y rotación interna de cadera; flexión y rotación interna de rodilla.'),
-      src: [KH('semitendinosus-muscle', 'Semitendinosus muscle')]
-    }
+      'El PDF dice «KNEE EXT»: el semitendinoso es flexor de rodilla, la resistencia se opone a la flexión (cf. semimembranoso y bíceps: «KNEE FLEX»).')
   },
   {
     id: 'semi-membraneux', p: 'p6', s: '30-31', img: ['semi-membraneux'],
@@ -273,13 +213,7 @@ CARDS.push(
        'Palpate between the semitendinosus tendon and gracilis, then move up onto the muscle belly.'],
       ['Paciente (PDF: decúbito supino) rodilla flexionada, pierna en rotación interna.', 'Fisioterapeuta al lado, mano en el talón para controlar la rodilla.',
        'Resistencia contra la flexión + rotación interna de rodilla.',
-       'Palpar entre el tendón del semitendinoso y el grácil, luego subir por el vientre muscular.']),
-    w: {
-      x: L('Tubérosité ischiatique → condyle médial du tibia. Action : extension et rotation interne de hanche ; flexion et rotation interne de jambe.',
-        'Ischial tuberosity → medial tibial condyle. Action: hip extension and internal rotation; leg flexion and internal rotation.',
-        'Tuberosidad isquiática → cóndilo medial de la tibia. Acción: extensión y rotación interna de cadera; flexión y rotación interna de la pierna.'),
-      src: [KH('semimembranosus-muscle', 'Semimembranosus muscle')]
-    }
+       'Palpar entre el tendón del semitendinoso y el grácil, luego subir por el vientre muscular.'])
   },
   {
     id: 'biceps-femoral', p: 'p6', s: '32-34', img: ['biceps-femoral', 'biceps-femoral-2'],
@@ -297,13 +231,7 @@ CARDS.push(
        'Palpate the biceps femoris tendon and belly on the posterolateral side.'],
       ['Paciente en decúbito prono, rodilla flexionada, pierna en rotación externa.', 'Fisioterapeuta al lado, mano en el talón para controlar la rodilla.',
        'Resistencia contra la flexión + rotación externa de rodilla.',
-       'Palpar el tendón y el vientre del bíceps femoral en la cara posterolateral.']),
-    w: {
-      x: L('Chef long : tubérosité ischiatique ; chef court : ligne âpre (lèvre latérale) → tête de la fibula. Action : extension et rotation externe de hanche ; flexion et rotation externe de jambe.',
-        'Long head: ischial tuberosity; short head: linea aspera (lateral lip) → head of the fibula. Action: hip extension and external rotation; leg flexion and external rotation.',
-        'Cabeza larga: tuberosidad isquiática; cabeza corta: línea áspera (labio lateral) → cabeza del peroné. Acción: extensión y rotación externa de cadera; flexión y rotación externa de la pierna.'),
-      src: [KH('biceps-femoris-muscle', 'Biceps femoris muscle')]
-    }
+       'Palpar el tendón y el vientre del bíceps femoral en la cara posterolateral.'])
   },
   {
     id: 'grand-fessier', p: 'p6', s: '35-36', img: ['grand-fessier', 'grand-fessier-2'],
@@ -324,13 +252,7 @@ CARDS.push(
       ['Paciente en decúbito prono, rodilla en flexión de 90°.', 'Fisioterapeuta al lado del paciente.',
        'Pedir que separe la pierna de la camilla (extensión de cadera).',
        'Resistencia en el tercio distal del muslo.',
-       'Palpar el glúteo mayor durante la contracción.']),
-    w: {
-      x: L('Sacrum, coccyx, surface glutéale de l\'ilium, fascia thoraco-lombaire → bandelette ilio-tibiale et tubérosité glutéale. Action : extension et rotation externe de hanche.',
-        'Sacrum, coccyx, gluteal surface of the ilium, thoracolumbar fascia → iliotibial tract and gluteal tuberosity. Action: hip extension and external rotation.',
-        'Sacro, cóccix, cara glútea del ilion, fascia toracolumbar → cintilla iliotibial y tuberosidad glútea. Acción: extensión y rotación externa de cadera.'),
-      src: [KH('gluteus-maximus-muscle', 'Gluteus maximus muscle')]
-    }
+       'Palpar el glúteo mayor durante la contracción.'])
   },
   {
     id: 'moyen-fessier', p: 'p6', s: '37-38', img: ['moyen-fessier', 'moyen-fessier-2'],
@@ -351,13 +273,7 @@ CARDS.push(
       ['Paciente en decúbito lateral, rodilla extendida.', 'Fisioterapeuta delante del paciente.',
        'Pedir abducción contra resistencia con ligera extensión de cadera; resistencia en el tercio distal.',
        'Pedir rotaciones externa-interna para notar el músculo.',
-       'Palpar por detrás y por encima del TFL.']),
-    w: {
-      x: L('Surface glutéale de l\'ilium → face latérale du grand trochanter. Action : abduction et rotation médiale ; stabilise le bassin à la marche (évite la chute du côté opposé).',
-        'Gluteal surface of the ilium → lateral surface of the greater trochanter. Action: abduction and medial rotation; stabilizes the pelvis during gait (prevents contralateral drop).',
-        'Cara glútea del ilion → cara lateral del trocánter mayor. Acción: abducción y rotación medial; estabiliza la pelvis en la marcha (evita la caída contralateral).'),
-      src: [TMA('lower-limb/muscles/gluteal-region/', 'Muscles of the gluteal region')]
-    }
+       'Palpar por detrás y por encima del TFL.'])
   },
   {
     id: 'petit-fessier', p: 'p6', s: '39-40', img: ['petit-fessier', 'petit-fessier-2'],
@@ -375,12 +291,6 @@ CARDS.push(
        'Place the fingers under the anterior fibres of gluteus medius, below and behind the TFL: feel the deep contraction.'],
       ['Paciente en decúbito lateral, rodilla extendida.', 'Fisioterapeuta delante, fija la rodilla por la cara interna.',
        'Pedir una rotación interna contra resistencia.',
-       'Colocar los dedos bajo las fibras anteriores del glúteo medio, por debajo y detrás del TFL: percibir la contracción profunda.']),
-    w: {
-      x: L('Surface glutéale de l\'ilium (entre lignes glutéales antérieure et inférieure) → face antérieure du grand trochanter. Action : abduction, rotation interne (partie antérieure), stabilisation du bassin.',
-        'Gluteal surface of the ilium (between anterior and inferior gluteal lines) → anterior greater trochanter. Action: abduction, internal rotation (anterior part), pelvic stabilization.',
-        'Cara glútea del ilion (entre líneas glúteas anterior e inferior) → cara anterior del trocánter mayor. Acción: abducción, rotación interna (parte anterior), estabilización pélvica.'),
-      src: [KH('gluteus-minimus-muscle', 'Gluteus minimus muscle')]
-    }
+       'Colocar los dedos bajo las fibras anteriores del glúteo medio, por debajo y detrás del TFL: percibir la contracción profunda.'])
   }
 );

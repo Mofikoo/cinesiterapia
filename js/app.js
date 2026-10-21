@@ -1,7 +1,8 @@
 // Interface : accueil, mode révision (grille + fiche), mode test (cartes à retourner), langue
 const UI = {
   fr: {
-    appSub: 'Palpations et mobilisations pour l\'examen pratique', settings: 'Réglages', language: 'Langue', close: 'Fermer',
+    appSub: 'Palpations et mobilisations pour l\'examen pratique', languageLabel: 'Langue :', language: 'Langue', close: 'Fermer',
+    muscle: 'Le muscle', origin: 'Origine', insertion: 'Insertion', func: 'Fonction', anatSrc: 'Sources :',
     modeReview: 'Réviser', modeReviewDesc: 'Toutes les fiches par thème : photo, description et ordre d\'exécution.',
     modeTest: 'Se tester', modeTestDesc: 'Une carte au hasard avec seulement le titre. Retourne-la pour voir la réponse.',
     search: 'Rechercher un muscle, une manœuvre…', all: 'Tout', cards: (n) => `${n} fiche${n > 1 ? 's' : ''}`,
@@ -12,7 +13,8 @@ const UI = {
     footer: 'Contenu tiré des supports de cours de Mireia Yeste (UCV, 2026-27). Compléments sourcés sur chaque fiche.'
   },
   en: {
-    appSub: 'Palpations and mobilizations for the practical exam', settings: 'Settings', language: 'Language', close: 'Close',
+    appSub: 'Palpations and mobilizations for the practical exam', languageLabel: 'Language:', language: 'Language', close: 'Close',
+    muscle: 'The muscle', origin: 'Origin', insertion: 'Insertion', func: 'Function', anatSrc: 'Sources:',
     modeReview: 'Review', modeReviewDesc: 'All cards by topic: picture, description and order of execution.',
     modeTest: 'Test yourself', modeTestDesc: 'A random card showing only the title. Flip it to see the answer.',
     search: 'Search a muscle, a maneuver…', all: 'All', cards: (n) => `${n} card${n > 1 ? 's' : ''}`,
@@ -23,7 +25,8 @@ const UI = {
     footer: 'Content from Mireia Yeste\'s course slides (UCV, 2026-27). Extra info is sourced on each card.'
   },
   es: {
-    appSub: 'Palpaciones y movilizaciones para el examen práctico', settings: 'Ajustes', language: 'Idioma', close: 'Cerrar',
+    appSub: 'Palpaciones y movilizaciones para el examen práctico', languageLabel: 'Idioma:', language: 'Idioma', close: 'Cerrar',
+    muscle: 'El músculo', origin: 'Origen', insertion: 'Inserción', func: 'Función', anatSrc: 'Fuentes:',
     modeReview: 'Repasar', modeReviewDesc: 'Todas las fichas por tema: foto, descripción y orden de ejecución.',
     modeTest: 'Ponerse a prueba', modeTestDesc: 'Una carta al azar con solo el título. Dale la vuelta para ver la respuesta.',
     search: 'Buscar un músculo, una maniobra…', all: 'Todo', cards: (n) => `${n} ficha${n > 1 ? 's' : ''}`,
@@ -68,7 +71,7 @@ function applyStatic() {
   document.querySelectorAll('[data-i18n]').forEach((el) => { const v = u[el.dataset.i18n]; if (typeof v === 'string') el.textContent = v; });
   document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', u[el.dataset.i18nAria]));
   document.querySelectorAll('[data-i18n-ph]').forEach((el) => el.setAttribute('placeholder', u[el.dataset.i18nPh]));
-  document.querySelectorAll('input[name="lang"]').forEach((r) => { r.checked = r.value === lang; });
+  document.querySelectorAll('.lang-btn').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
 }
 
 function renderTabs() {
@@ -79,12 +82,29 @@ function renderTabs() {
   document.querySelectorAll('.tabs').forEach((nav) => { nav.innerHTML = html; });
 }
 
+const srcLinks = (src) => src.map((s) => `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.n)}</a>`).join(' · ');
+
+function muscleHtml(m) {
+  if (!m) return '';
+  const u = UI[lang];
+  return `<section class="anat">
+    <h3>${esc(u.muscle)}</h3>
+    <dl>
+      <dt>${esc(u.origin)}</dt><dd>${esc(m.o[lang])}</dd>
+      <dt>${esc(u.insertion)}</dt><dd>${esc(m.i[lang])}</dd>
+      <dt>${esc(u.func)}</dt><dd>${esc(m.f[lang])}</dd>
+    </dl>
+    <p class="anat-src">${esc(u.anatSrc)} ${srcLinks(m.src)}</p>
+  </section>`;
+}
+
 // Contenu commun : fiche détaillée (révision) et verso de carte (test)
 function answerHtml(c) {
   const u = UI[lang];
   return `
     ${c.img.length ? `<div class="photos">${c.img.map((i) => imgTag(i)).join('')}</div>` : ''}
     <p class="desc">${esc(c.d[lang])}</p>
+    ${muscleHtml(MUSCLES[c.id])}
     <h3>${esc(u.steps)}</h3>
     <ol class="steps">${c.st[lang].map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
     ${c.n ? `<aside class="box warn"><strong>${esc(u.note)}</strong><p>${esc(c.n[lang])}</p></aside>` : ''}
@@ -212,17 +232,14 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('#shuffle-btn')) { shuffleDeck(); renderTest(); return; }
   const card = e.target.closest('.card');
   if (card) { renderDetail(card.dataset.id); return; }
-  if (e.target.closest('#settings-btn')) { $('#settings').showModal(); return; }
+  const langBtn = e.target.closest('.lang-btn');
+  if (langBtn) { lang = langBtn.dataset.lang; store.set('kine_lang', lang); renderAll(); return; }
   // clic sur le fond d'une fenêtre = fermeture
   if (e.target.tagName === 'DIALOG') e.target.close();
 });
 
 document.addEventListener('keydown', (e) => {
   if (e.target.id === 'flashcard' && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); flip(); }
-});
-
-document.addEventListener('change', (e) => {
-  if (e.target.name === 'lang') { lang = e.target.value; store.set('kine_lang', lang); renderAll(); }
 });
 
 $('#search').addEventListener('input', (e) => { query = e.target.value; renderGrid(); });
