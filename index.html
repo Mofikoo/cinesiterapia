@@ -10,15 +10,16 @@
 </head>
 <body>
   <header class="top">
+    <a class="back-btn" href="#/" hidden><span aria-hidden="true">←</span> <span data-i18n="home">Accueil</span></a>
     <a class="brand" href="#/">
       <h1 data-i18n="appTitle">Kiné Révision</h1>
       <p class="sub" data-i18n="appSub"></p>
     </a>
     <div class="lang-switch" role="group" data-i18n-aria="language">
       <span class="lang-label" data-i18n="languageLabel">Langue :</span>
-      <button type="button" class="lang-btn" data-lang="fr" lang="fr">Français</button>
-      <button type="button" class="lang-btn" data-lang="es" lang="es">Español</button>
-      <button type="button" class="lang-btn" data-lang="en" lang="en">English</button>
+      <button type="button" class="lang-btn" data-lang="fr" lang="fr" aria-label="Français"><span class="long">Français</span><span class="short">FR</span></button>
+      <button type="button" class="lang-btn" data-lang="es" lang="es" aria-label="Español"><span class="long">Español</span><span class="short">ES</span></button>
+      <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English"><span class="long">English</span><span class="short">EN</span></button>
     </div>
   </header>
 
@@ -36,7 +37,13 @@
   </main>
 
   <main id="view-review" hidden>
-    <nav class="tabs" aria-label="Practices"></nav>
+    <div class="filters">
+      <button type="button" class="filter-toggle" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <span class="filter-current"></span>
+      </button>
+      <nav class="tabs" aria-label="Thèmes"></nav>
+    </div>
     <div class="toolbar">
       <input type="search" id="search" class="search" data-i18n-ph="search">
       <span class="count" id="count"></span>
@@ -45,7 +52,13 @@
   </main>
 
   <main id="view-test" hidden>
-    <nav class="tabs" aria-label="Practices"></nav>
+    <div class="filters">
+      <button type="button" class="filter-toggle" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <span class="filter-current"></span>
+      </button>
+      <nav class="tabs" aria-label="Thèmes"></nav>
+    </div>
     <div class="test-zone">
       <p class="progress" id="progress"></p>
       <div id="flashcard" class="flashcard" role="button" tabindex="0"></div>

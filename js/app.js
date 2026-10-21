@@ -1,7 +1,7 @@
 // Interface : accueil, mode révision (grille + fiche), mode test (cartes à retourner), langue
 const UI = {
   fr: {
-    appTitle: 'Kiné Révision', appSub: 'Palpations et mobilisations pour l\'examen pratique', languageLabel: 'Langue :', language: 'Langue', close: 'Fermer',
+    appTitle: 'Kiné Révision', home: 'Accueil', themes: 'Thèmes', theme: 'Thème', appSub: 'Palpations et mobilisations pour l\'examen pratique', languageLabel: 'Langue :', language: 'Langue', close: 'Fermer',
     muscle: 'Le muscle', origin: 'Origine', insertion: 'Insertion', func: 'Fonction', anatSrc: 'Sources :',
     modeReview: 'Réviser', modeReviewDesc: 'Toutes les fiches par thème : photo, description et ordre d\'exécution.',
     modeTest: 'Se tester', modeTestDesc: 'Une carte au hasard avec seulement le titre. Retourne-la pour voir la réponse.',
@@ -13,7 +13,7 @@ const UI = {
     footer: 'Contenu tiré des supports de cours de Mireia Yeste (UCV, 2026-27). Compléments sourcés sur chaque fiche.'
   },
   en: {
-    appTitle: 'Physio Review', appSub: 'Palpations and mobilizations for the practical exam', languageLabel: 'Language:', language: 'Language', close: 'Close',
+    appTitle: 'Physio Review', home: 'Home', themes: 'Topics', theme: 'Topic', appSub: 'Palpations and mobilizations for the practical exam', languageLabel: 'Language:', language: 'Language', close: 'Close',
     muscle: 'The muscle', origin: 'Origin', insertion: 'Insertion', func: 'Function', anatSrc: 'Sources:',
     modeReview: 'Review', modeReviewDesc: 'All cards by topic: picture, description and order of execution.',
     modeTest: 'Test yourself', modeTestDesc: 'A random card showing only the title. Flip it to see the answer.',
@@ -25,7 +25,7 @@ const UI = {
     footer: 'Content from Mireia Yeste\'s course slides (UCV, 2026-27). Extra info is sourced on each card.'
   },
   es: {
-    appTitle: 'Repaso de Fisio', appSub: 'Palpaciones y movilizaciones para el examen práctico', languageLabel: 'Idioma:', language: 'Idioma', close: 'Cerrar',
+    appTitle: 'Repaso de Fisio', home: 'Inicio', themes: 'Temas', theme: 'Tema', appSub: 'Palpaciones y movilizaciones para el examen práctico', languageLabel: 'Idioma:', language: 'Idioma', close: 'Cerrar',
     muscle: 'El músculo', origin: 'Origen', insertion: 'Inserción', func: 'Función', anatSrc: 'Fuentes:',
     modeReview: 'Repasar', modeReviewDesc: 'Todas las fichas por tema: foto, descripción y orden de ejecución.',
     modeTest: 'Ponerse a prueba', modeTestDesc: 'Una carta al azar con solo el título. Dale la vuelta para ver la respuesta.',
@@ -86,7 +86,20 @@ function renderTabs() {
     ...Object.entries(PRACTICES).map(([k, v]) => [k, v[lang], CARDS.filter((c) => c.p === k).length])];
   const html = items.map(([k, label, n]) =>
     `<button type="button" class="tab" data-p="${k}" aria-pressed="${k === practice}">${esc(label)}<span class="tab-count">${n}</span></button>`).join('');
-  document.querySelectorAll('.tabs').forEach((nav) => { nav.innerHTML = html; });
+  const [, curLabel, curCount] = items.find(([k]) => k === practice) || items[0];
+  document.querySelectorAll('.tabs').forEach((nav) => { nav.innerHTML = html; nav.setAttribute('aria-label', UI[lang].themes); });
+  document.querySelectorAll('.filter-current').forEach((el) => {
+    el.innerHTML = `${esc(UI[lang].theme)}${lang === 'fr' ? ' :' : ':'} <strong>${esc(curLabel)}</strong><span class="tab-count">${curCount}</span>`;
+  });
+}
+
+// Menu burger des thèmes (mobile)
+function setFilterMenu(open, btn) {
+  document.querySelectorAll('.filter-toggle').forEach((b) => {
+    const isOpen = open && (!btn || b === btn);
+    b.setAttribute('aria-expanded', isOpen);
+    b.parentElement.classList.toggle('open', isOpen);
+  });
 }
 
 const srcLinks = (src) => src.map((s) => `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.n)}</a>`).join(' · ');
@@ -205,6 +218,9 @@ function nextCard() {
 function showView() {
   const v = route();
   ['home', 'review', 'test'].forEach((name) => { $(`#view-${name}`).hidden = name !== v; });
+  $('.back-btn').hidden = v === 'home';
+  document.body.dataset.view = v;
+  setFilterMenu(false);
   if (v === 'test' && !deck.cards.length) shuffleDeck();
   renderView();
 }
@@ -224,8 +240,12 @@ function renderAll() {
 }
 
 document.addEventListener('click', (e) => {
+  const toggle = e.target.closest('.filter-toggle');
+  if (toggle) { setFilterMenu(toggle.getAttribute('aria-expanded') !== 'true', toggle); return; }
+  if (!e.target.closest('.filters')) setFilterMenu(false);
   const tab = e.target.closest('.tab');
   if (tab) {
+    setFilterMenu(false);
     practice = tab.dataset.p;
     store.set('kine_practice', practice);
     shuffleDeck();
@@ -246,6 +266,7 @@ document.addEventListener('click', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setFilterMenu(false);
   if (e.target.id === 'flashcard' && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); flip(); }
 });
 
