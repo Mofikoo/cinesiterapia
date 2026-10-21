@@ -4,6 +4,7 @@ Application web de révision des palpations et mobilisations de kinésithérapie
 
 - HTML / CSS / JavaScript vanilla, aucune dépendance, aucune base de données : tout le contenu est codé en dur dans `js/data-*.js`.
 - Langues : français, anglais, espagnol (engrenage en haut à droite).
+- Accueil avec deux modes : **Réviser** (toutes les fiches par thème, recherche) et **Se tester** (cartes tirées au hasard, recto = titre, clic pour retourner et voir la réponse). Compteur de fiches sur chaque thème.
 - Une fiche par manœuvre : titre, photo extraite du PDF, description, ordre d'exécution, remarques sur les erreurs du PDF et compléments web sourcés.
 
 ## Contenu

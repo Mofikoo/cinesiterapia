@@ -10,23 +10,48 @@
 </head>
 <body>
   <header class="top">
-    <div class="brand">
+    <a class="brand" href="#/">
       <h1 data-i18n="appTitle">Kiné Révision</h1>
       <p class="sub" data-i18n="appSub"></p>
-    </div>
+    </a>
     <button class="icon-btn" id="settings-btn" type="button" aria-haspopup="dialog" data-i18n-aria="settings">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6a.5.5 0 0 0 .1-.6l-2-3.5a.5.5 0 0 0-.6-.2l-2.5 1a7.3 7.3 0 0 0-1.7-1l-.4-2.6a.5.5 0 0 0-.5-.4h-4a.5.5 0 0 0-.5.4l-.4 2.6a7.3 7.3 0 0 0-1.7 1l-2.5-1a.5.5 0 0 0-.6.2l-2 3.5a.5.5 0 0 0 .1.6L4.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6a.5.5 0 0 0-.1.6l2 3.5c.1.2.4.3.6.2l2.5-1c.5.4 1.1.7 1.7 1l.4 2.6c0 .2.2.4.5.4h4c.3 0 .5-.2.5-.4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1c.2.1.5 0 .6-.2l2-3.5a.5.5 0 0 0-.1-.6L19.4 13ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg>
     </button>
   </header>
 
-  <nav class="tabs" id="tabs" aria-label="Practices"></nav>
+  <main id="view-home" class="home" hidden>
+    <a class="mode" href="#/reviser">
+      <span class="mode-icon" aria-hidden="true">📖</span>
+      <h2 data-i18n="modeReview">Réviser</h2>
+      <p data-i18n="modeReviewDesc"></p>
+    </a>
+    <a class="mode" href="#/test">
+      <span class="mode-icon" aria-hidden="true">🎴</span>
+      <h2 data-i18n="modeTest">Se tester</h2>
+      <p data-i18n="modeTestDesc"></p>
+    </a>
+  </main>
 
-  <div class="toolbar">
-    <input type="search" id="search" class="search" data-i18n-ph="search">
-    <span class="count" id="count"></span>
-  </div>
+  <main id="view-review" hidden>
+    <nav class="tabs" aria-label="Practices"></nav>
+    <div class="toolbar">
+      <input type="search" id="search" class="search" data-i18n-ph="search">
+      <span class="count" id="count"></span>
+    </div>
+    <div id="grid" class="grid"></div>
+  </main>
 
-  <main id="grid" class="grid"></main>
+  <main id="view-test" hidden>
+    <nav class="tabs" aria-label="Practices"></nav>
+    <div class="test-zone">
+      <p class="progress" id="progress"></p>
+      <div id="flashcard" class="flashcard" role="button" tabindex="0"></div>
+      <div class="test-actions">
+        <button type="button" class="btn ghost" id="shuffle-btn" data-i18n="shuffle">Mélanger</button>
+        <button type="button" class="btn" id="next-btn" data-i18n="next">Suivante</button>
+      </div>
+    </div>
+  </main>
 
   <dialog id="settings" class="modal small">
     <form method="dialog">
