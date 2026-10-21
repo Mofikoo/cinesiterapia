@@ -438,3 +438,16 @@ img { max-width: 100%; display: block; }
   .anat dl { grid-template-columns: 1fr; gap: 2px; }
   .anat dd { margin-bottom: 6px; }
 }
+
+.type-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--alt-soft);
+  color: var(--alt);
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}

@@ -1,7 +1,7 @@
 // Interface : accueil, mode révision (grille + fiche), mode test (cartes à retourner), langue
 const UI = {
   fr: {
-    appSub: 'Palpations et mobilisations pour l\'examen pratique', languageLabel: 'Langue :', language: 'Langue', close: 'Fermer',
+    appTitle: 'Kiné Révision', appSub: 'Palpations et mobilisations pour l\'examen pratique', languageLabel: 'Langue :', language: 'Langue', close: 'Fermer',
     muscle: 'Le muscle', origin: 'Origine', insertion: 'Insertion', func: 'Fonction', anatSrc: 'Sources :',
     modeReview: 'Réviser', modeReviewDesc: 'Toutes les fiches par thème : photo, description et ordre d\'exécution.',
     modeTest: 'Se tester', modeTestDesc: 'Une carte au hasard avec seulement le titre. Retourne-la pour voir la réponse.',
@@ -13,7 +13,7 @@ const UI = {
     footer: 'Contenu tiré des supports de cours de Mireia Yeste (UCV, 2026-27). Compléments sourcés sur chaque fiche.'
   },
   en: {
-    appSub: 'Palpations and mobilizations for the practical exam', languageLabel: 'Language:', language: 'Language', close: 'Close',
+    appTitle: 'Physio Review', appSub: 'Palpations and mobilizations for the practical exam', languageLabel: 'Language:', language: 'Language', close: 'Close',
     muscle: 'The muscle', origin: 'Origin', insertion: 'Insertion', func: 'Function', anatSrc: 'Sources:',
     modeReview: 'Review', modeReviewDesc: 'All cards by topic: picture, description and order of execution.',
     modeTest: 'Test yourself', modeTestDesc: 'A random card showing only the title. Flip it to see the answer.',
@@ -25,7 +25,7 @@ const UI = {
     footer: 'Content from Mireia Yeste\'s course slides (UCV, 2026-27). Extra info is sourced on each card.'
   },
   es: {
-    appSub: 'Palpaciones y movilizaciones para el examen práctico', languageLabel: 'Idioma:', language: 'Idioma', close: 'Cerrar',
+    appTitle: 'Repaso de Fisio', appSub: 'Palpaciones y movilizaciones para el examen práctico', languageLabel: 'Idioma:', language: 'Idioma', close: 'Cerrar',
     muscle: 'El músculo', origin: 'Origen', insertion: 'Inserción', func: 'Función', anatSrc: 'Fuentes:',
     modeReview: 'Repasar', modeReviewDesc: 'Todas las fichas por tema: foto, descripción y orden de ejecución.',
     modeTest: 'Ponerse a prueba', modeTestDesc: 'Una carta al azar con solo el título. Dale la vuelta para ver la respuesta.',
@@ -44,6 +44,12 @@ const PRACTICES = {
   p3: L('Mobilisations de l\'épaule', 'Shoulder mobilizations', 'Movilizaciones de hombro'),
   p6: L('Palpation du membre inférieur', 'Lower limb palpation', 'Palpación del miembro inferior')
 };
+const TYPE = {
+  palpation: L('Palpation', 'Palpation', 'Palpación'),
+  mobilisation: L('Mobilisation', 'Mobilization', 'Movilización')
+};
+const typeOf = (c) => (c.p === 'p1' || c.p === 'p6' ? TYPE.palpation : TYPE.mobilisation);
+const typeBadge = (c) => `<span class="type-badge">${esc(typeOf(c)[lang])}</span>`;
 const PDF_NAME = { p1: 'Practice 1 Trunk palpation', p2: 'Practice 2 Spine mobilizations', p3: 'Practice 3 Shoulder mobilizations', p6: 'Practice 6 Lower limb palpation' };
 
 const store = {
@@ -68,6 +74,7 @@ const route = () => ({ '#/reviser': 'review', '#/test': 'test' })[location.hash]
 function applyStatic() {
   const u = UI[lang];
   document.documentElement.lang = lang;
+  document.title = u.appTitle;
   document.querySelectorAll('[data-i18n]').forEach((el) => { const v = u[el.dataset.i18n]; if (typeof v === 'string') el.textContent = v; });
   document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', u[el.dataset.i18nAria]));
   document.querySelectorAll('[data-i18n-ph]').forEach((el) => el.setAttribute('placeholder', u[el.dataset.i18nPh]));
@@ -171,8 +178,8 @@ function renderTest() {
   const c = deck.cards[deck.i];
   fc.className = `flashcard ${deck.flipped ? 'back' : 'front'}`;
   fc.innerHTML = deck.flipped
-    ? `${chips(c, true)}<h2>${esc(c.t[lang])}</h2>${answerHtml(c)}`
-    : `<h2 class="front-title">${esc(c.t[lang])}</h2><p class="hint">${esc(u.tapToFlip)}</p>`;
+    ? `${typeBadge(c)}${chips(c, true)}<h2>${esc(c.t[lang])}</h2>${answerHtml(c)}`
+    : `${typeBadge(c)}<h2 class="front-title">${esc(c.t[lang])}</h2><p class="hint">${esc(u.tapToFlip)}</p>`;
 }
 
 // Retournement : demi-tour, changement de face, demi-tour
